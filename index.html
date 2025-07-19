@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Today - Strength & Cardio Workouts for All Levels</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fitness Today offers personalized strength and cardio workouts for all fitness levels. Boost metabolism, build lean muscle, and track real-time progress with expert coaching.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+    <meta property="og:title" content="Fitness Today - Strength & Cardio Workouts">
+    <meta property="og:description" content="Your daily companion for fitness tracking and training. Personalized workouts for all levels.">
+    <meta property="og:image" content="https://cdn.prod.website-files.com/6629184900a2ef9802de6081/677e192a17fa0aaceffe2a2c_home-section-1%20-%202.webp"> <!-- Replace with your actual image URL if hosted locally -->
+    <meta property="og:url" content="https://yourdomain.com/"> <!-- Replace with your actual PWA URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fitness Today - Strength & Cardio Workouts">
+    <meta name="twitter:description" content="Your daily companion for fitness tracking and training. Personalized workouts for all levels.">
+    <meta name="twitter:image" content="https://cdn.prod.website-files.com/6629184900a2ef9802de6081/677e192a17fa0aaceffe2a2c_home-section-1%20-%202.webp"> <!-- Replace with your actual image URL if hosted locally -->
+    <meta name="twitter:creator" content="@FitnessTodayApp"> <!-- Replace with your Twitter handle -->
+
+    <!-- Link to your Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Theme color for browser UI (e.g., address bar on Android) -->
+    <meta name="theme-color" content="#22c55e">
+    <!-- Apple iOS specific meta tags for PWA experience -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+
+    <!-- Link to your main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header: App title and main navigation -->
+    <header class="bg-green-600 text-white p-4 shadow-lg rounded-b-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <button id="nav-toggle-btn" aria-label="Open navigation menu" class="lg:hidden">☰</button>
+            <h1 class="text-white text-2xl font-bold">Fitness Today</h1>
+            <!-- Navigation: Centered on large screens -->
+            <nav aria-label="Main Navigation" class="hidden lg:block flex-grow">
+                <ul class="flex space-x-4 justify-center">
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="/diet.html">Diet</a></li>
+                    <li><a href="/training.html">Training</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Placeholder for user profile or other header actions -->
+            <div class="hidden lg:block">
+                <button id="profile-btn" aria-label="User profile" class="text-white hover:text-green-200 transition-colors duration-200">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="hero bg-green-50 py-12 px-6 lg:py-20">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-green-800 mb-6 leading-tight">
+                        The strength and cardio workout to energize you from the inside out.
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Fitness Today is an all-in-one, dynamic blend of strength and cardio training that
+                        supercharges your metabolism to burn more calories and build lean muscle. Our coaches guide you
+                        through science-backed workouts designed for all fitness levels. You can track your progress and celebrate your gains.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We're so confident you'll love Fitness Today that we offer a 30-day money-back guarantee*.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://cdn.prod.website-files.com/6629184900a2ef9802de6081/677e192a17fa0aaceffe2a2c_home-section-1%20-%202.webp"
+                         alt="Woman working out with weights" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalized Fitness Section -->
+        <section class="bg-white py-12 px-6 lg:py-20">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2 flex justify-center order-2 lg:order-1">
+                    <img src="https://cdn.prod.website-files.com/6629184900a2ef9802de6081/67f3ece0b37916111a49fb48_n-banner-3-optimized%20(1).webp"
+                         alt="Group working out in a gym" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-tight">Personalized fitness designed for all fitness levels.</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Unlike high-intensity training (HIIT), Fitness Today uses variable-intensity intervals that work
+                        for a much broader range of fitness levels. With expert guidance from your triple-certified coach,
+                        it feels like a very personalized experience: You'll quickly figure out what’s working for you —
+                        when to push and when to ease off to recover.
+                    </p>
+                    <a href="#terms" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Details Section -->
+        <section id="terms" class="terms bg-gray-50 py-12 px-6 lg:py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-semibold text-green-700 mb-4">Offer Details</h2>
+                <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed space-y-2">
+                    <li>Valid only at participating studios.</li>
+                    <li>Recommended retail price of a casual visit is $35; prices vary as each studio is individually owned.</li>
+                    <li>Offer subject to pre-exercise screening and/or standard temporary/guest membership terms.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Premier Member Bonus Section -->
+        <section class="membership-offer bg-white py-12 px-6 lg:py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-semibold text-green-700 mb-4">Premier Member Bonus</h2>
+                <p class="text-lg text-gray-700 mb-3 leading-relaxed">
+                    Complete 12 sessions within your first month to qualify for a full refund of membership dues.
+                </p>
+                <p class="text-lg text-gray-700 mb-3 leading-relaxed">
+                    You must notify us within 30 days of joining to initiate cancellation and receive your refund.
+                </p>
+                <p class="text-lg text-gray-700 font-bold leading-relaxed">
+                    Note: Fitness Today membership after the first 30 days are final sale and not eligible for refunds.
+                </p>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="notes bg-gray-50 py-8 px-6 lg:py-10 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-base text-gray-600 italic">*Restrictions may apply. Please inquire at your local studio for additional information.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-gray-800 text-white p-4 text-center text-sm rounded-t-lg">
+        <p>&copy; 2025 Fitness Today. All rights reserved. | <a href="#privacy" class="text-green-400 hover:underline">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

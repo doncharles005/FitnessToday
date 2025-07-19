@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Today - Diet</title>
+    <!-- Link to your Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Theme color for browser UI (e.g., address bar on Android) -->
+    <meta name="theme-color" content="#22c55e">
+    <!-- Apple iOS specific meta tags for PWA experience -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+
+    <!-- Link to your main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header: App title and main navigation -->
+    <header class="bg-green-600 text-white p-4 shadow-lg rounded-b-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <button id="nav-toggle-btn" aria-label="Open navigation menu" class="lg:hidden">☰</button>
+            <h1 class="text-white text-2xl font-bold">Fitness Today</h1>
+            <!-- Navigation: Centered on large screens -->
+            <nav aria-label="Main Navigation" class="hidden lg:block flex-grow">
+                <ul class="flex space-x-4 justify-center">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/diet.html" class="active">Diet</a></li> <!-- New Diet link, active on this page -->
+                    <li><a href="/training.html">Training</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Placeholder for user profile or other header actions -->
+            <div class="hidden lg:block">
+                <button id="profile-btn" aria-label="User profile" class="text-white hover:text-green-200 transition-colors duration-200">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content area for Diet Page -->
+    <main class="flex-grow">
+        <!-- Hero Section for Diet Page -->
+        <section class="hero bg-green-50 py-12 px-6 lg:py-20 text-center relative overflow-hidden"
+                 style="background-image: linear-gradient(rgba(240, 253, 244, 0.7), rgba(240, 253, 244, 0.7)), url('https://cms-api-in.myhealthcare.co/image/20220913125713.jpg'); background-size: cover; background-position: center;">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-green-800 mb-6 leading-tight">
+                    Fuel Your Fitness — Free Nutrition Guide
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Download our free nutrition guide designed to complement your workouts and optimize your results.
+                </p>
+                <a href="#" class="btn">Download Now</a>
+            </div>
+        </section>
+
+        <!-- Healthy Eating Sections with Images -->
+        <section class="bg-white py-12 px-6 lg:py-20">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 mb-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://lifesum.com/media/tableSet-218675db.png?w=1600"
+                         alt="Balanced meal plate" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Balanced Meals for Peak Performance</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Achieving your fitness goals starts with what's on your plate. A balanced diet provides the essential
+                        nutrients your body needs to perform at its best, recover efficiently, and build lean muscle.
+                        Focus on a mix of lean proteins, complex carbohydrates, and healthy fats to fuel your workouts and daily life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 mb-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://www.datocms-assets.com/23496/1687977472-barcode-scanner-3.png?auto=format&fit=crop&w=1600"
+                         alt="Barcode scanner for food tracking" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Track Your Intake, See Your Progress</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Understanding your caloric and macronutrient intake is a powerful tool for progress.
+                        Using food tracking apps or a simple food diary can help you stay accountable and make
+                        informed choices. It's not about strict restrictions, but about awareness and building sustainable habits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 mb-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://www.eatright.org/-/media/images/eatrightpro-campaigns/foodpantry_1200x675.jpg?as=0&w=967&rev=826c9bde2594409e95d0da512d05b720&hash=DB493B045A5F44983C6BF7FF86A098B4"
+                         alt="Variety of healthy foods in a pantry" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Embrace Whole, Unprocessed Foods</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Prioritize whole, unprocessed foods like fresh fruits, vegetables, lean meats, and whole grains.
+                        These foods are packed with vitamins, minerals, and fiber, providing sustained energy and supporting
+                        overall health. Minimizing processed foods can significantly impact your energy levels and well-being.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 mb-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://www.eatright.org/-/media/images/eatright-articles/eatright-article-feature-images/refrigeratepromptlyandproperly_600x450.jpg?as=0&w=620&rev=b3e4c7eca3714c38aab54e1b3788ca62&hash=401C71F82C11DCBF791F827756A5ABC8"
+                         alt="Food storage in a refrigerator" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Smart Food Storage and Preparation</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Meal prepping and proper food storage can be game-changers for healthy eating.
+                        Prepare meals in advance to avoid unhealthy last-minute choices. Store foods correctly
+                        to maintain freshness and nutritional value, making healthy eating convenient and accessible.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 mb-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://ymcawhittier.org/wp-content/uploads/sites/11/2023/07/whittier-healthy-foods.jpeg"
+                         alt="Basket of healthy foods" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Variety is the Spice of Life (and Diet!)</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Don't get stuck in a rut with your food choices. Incorporate a wide variety of fruits,
+                        vegetables, and protein sources to ensure you're getting a full spectrum of nutrients.
+                        A diverse diet not only keeps things interesting but also supports a healthier gut microbiome.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://crazynutrition.co.uk/cdn/shop/articles/HERO_90b4c138-fe7f-48bc-a0c7-bb0830620338.jpg?v=1705485335"
+                         alt="Healthy food bowl" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">Listen to Your Body's Cues</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Beyond counting calories or macros, learning to listen to your body's hunger and fullness cues
+                        is key to sustainable healthy eating. Practice mindful eating, savor your meals, and pay attention
+                        to how different foods make you feel. This intuitive approach fosters a healthier relationship with food.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features bg-white py-12 px-6 lg:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-center">
+            <div class="feature-item bg-gray-100 p-6 rounded-lg shadow-md">
+                <img src="https://placehold.co/64x64/22c55e/ffffff?text=🍽️" alt="Meal Plan Icon" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom Meal Plans</h3>
+                <p class="text-base text-gray-700">Tailored to your fitness goals and dietary preferences.</p>
+            </div>
+            <div class="feature-item bg-gray-100 p-6 rounded-lg shadow-md">
+                <img src="https://placehold.co/64x64/22c55e/ffffff?text=💧" alt="Hydration Icon" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Hydration Tips</h3>
+                <p class="text-base text-gray-700">Stay fueled and hydrated throughout your day and workouts.</p>
+            </div>
+        </section>
+
+        <!-- Terms Section -->
+        <section class="terms bg-gray-50 py-8 px-6 lg:py-10 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-base text-gray-600 italic">
+                    <em>The free nutrition guide is available to all new members and first-time visitors aged 18+. Minors aged 14+ may participate if
+                    special conditions are met. Offer valid at participating locations only.</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- Membership Offer Section -->
+        <section class="membership-offer bg-white py-12 px-6 lg:py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-semibold text-green-700 mb-4">Want More Personalization?</h2>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Upgrade to Premier Membership and receive personalized coaching sessions to help you reach
+                    your nutrition goals faster!
+                </p>
+                <a href="#" class="btn">Join as Premier Member</a>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="notes bg-gray-50 py-8 px-6 lg:py-10 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-base text-gray-600 italic">
+                    <strong>†Nutrition programs may vary by location. Restrictions apply.</strong> Inquire at your local studio for additional
+                    information.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-gray-800 text-white p-4 text-center text-sm rounded-t-lg">
+        <p>&copy; 2025 Fitness Today. All rights reserved. | <a href="#privacy" class="text-green-400 hover:underline">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Today - Training</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-lg rounded-b-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <button id="nav-toggle-btn" aria-label="Open navigation menu" class="lg:hidden">☰</button>
+            <h1 class="text-white text-2xl font-bold">Fitness Today</h1>
+            <nav aria-label="Main Navigation" class="hidden lg:block flex-grow">
+                <ul class="flex space-x-4 justify-center">
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="/diet.html">Diet</a></li>
+                    <li><a href="/training.html">Training</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hidden lg:block">
+                <button id="profile-btn" aria-label="User profile" class="text-white hover:text-green-200 transition-colors duration-200">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+<main class="flex-grow w-[80%] mx-auto p-4 lg:p-10">
+    <h2 class="text-2xl font-semibold mb-4">Training Videos</h2>
+    <div class="flex flex-col lg:flex-row items-start gap-10 w-full">
+        <!-- Video player: 100% width on small screens, 2/3 on large screens -->
+        <div class="w-full lg:w-3/4">
+            <iframe 
+            id="video-player"
+            class="w-full h-[500px] rounded-lg shadow" 
+            src="https://www.youtube.com/embed/hg7XAZCGQRA" 
+             frameborder="0" 
+            allowfullscreen>
+            </iframe>
+        </div>
+        
+       
+
+        <!-- Playlist with scroll -->
+        <div class="w-full lg:w-1/3">
+            <div class="bg-white rounded-lg shadow p-2 max-h-[500px] overflow-y-auto space-y-2">
+                <ul id="video-list">
+                    <li><button onclick="changeVideo('hg7XAZCGQRA')" class="text-left w-full p-2 rounded hover:bg-green-100">Intro to the App</button></li>
+                    <li><button onclick="changeVideo('RbyNpI07JfU')" class="text-left w-full p-2 rounded hover:bg-green-100">Using the Main Dashboard</button></li>
+                    <li><button onclick="changeVideo('vu9MfzMxf6o')" class="text-left w-full p-2 rounded hover:bg-green-100">Workout Tracking</button></li>
+                    <li><button onclick="changeVideo('NGsAYLB9wrA')" class="text-left w-full p-2 rounded hover:bg-green-100">Meal Planning</button></li>
+                    <li><button onclick="changeVideo('2MhLjovq09U')" class="text-left w-full p-2 rounded hover:bg-green-100">Scheduling</button></li>
+                    <li><button onclick="changeVideo('zF7xFytC8sE')" class="text-left w-full p-2 rounded hover:bg-green-100">Using Notifications</button></li>
+                    <li><button onclick="changeVideo('QAOCLBc22oc')" class="text-left w-full p-2 rounded hover:bg-green-100">Progress Monitoring</button></li>
+                    <li><button onclick="changeVideo('HlqC17K0aaE')" class="text-left w-full p-2 rounded hover:bg-green-100">Community Features</button></li>
+                    <li><button onclick="changeVideo('QJwTYdgc7Pc')" class="text-left w-full p-2 rounded hover:bg-green-100">Tips for Beginners</button></li>
+                    <li><button onclick="changeVideo('jFavEHq6bu4')" class="text-left w-full p-2 rounded hover:bg-green-100">Advanced Techniques</button></li>
+                    <li><button onclick="changeVideo('oP3U1vIuVv4')" class="text-left w-full p-2 rounded hover:bg-green-100">Mindfulness Training</button></li>
+                    <li><button onclick="changeVideo('lySLJNsZqRA')" class="text-left w-full p-2 rounded hover:bg-green-100">Strength Routine</button></li>
+                    <li><button onclick="changeVideo('xhOtH7Vp3eg')" class="text-left w-full p-2 rounded hover:bg-green-100">Training with Weights for Ladies</button></li>
+                    <li><button onclick="changeVideo('-4XSxhO-yZ8')" class="text-left w-full p-2 rounded hover:bg-green-100">Lower Body Pyramid Workout with Mini Band</button></li>
+                    <li><button onclick="changeVideo('2JDU2Wzc0Yw')" class="text-left w-full p-2 rounded hover:bg-green-100">Final Thoughts</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+      <!-- JavaScript to change videos -->
+    <script>
+        function changeVideo(videoId) {
+            const player = document.getElementById('video-player');
+            player.src = `https://www.youtube.com/embed/${videoId}`;
+        }
+    </script>
+    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="mt-auto bg-gray-800 text-white p-4 text-center text-sm rounded-t-lg">
+        <p>&copy; 2025 Fitness Today. All rights reserved. | <a href="#privacy" class="text-green-400 hover:underline">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
